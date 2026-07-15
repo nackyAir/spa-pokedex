@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "spa-pokedex",
+  "compatibility_date": "2026-07-15",
+  "assets": {
+    "directory": "./dist",
+    // SPA なので未知のパス (/pokemon/pikachu 等) への直アクセスも index.html を返し、
+    // ルーティングはクライアント側の TanStack Router に任せる
+    "not_found_handling": "single-page-application"
+  }
+}
